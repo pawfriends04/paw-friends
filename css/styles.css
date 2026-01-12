@@ -1,0 +1,223 @@
+:root {
+    --color-fondo: #fbf9f6;
+    --color-principal: #f3924c;
+    --color-texto: #2d3436;
+    --color-muted: #636e72;
+    --radio-grande: 35px;
+    --radio-mediano: 18px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+body { background-color: var(--color-fondo); color: var(--color-texto); scroll-behavior: smooth; }
+
+/* HEADER */
+header {
+    background: white; display: flex; justify-content: space-between; align-items: center;
+    padding: 15px 7%; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+nav ul { display: flex; list-style: none; gap: 20px; align-items: center; }
+nav a { text-decoration: none; color: var(--color-texto); font-weight: 500; }
+.btn-reportar-nav { background: #ff5e57; color: white !important; padding: 8px 20px; border-radius: 50px; }
+
+/* HERO */
+.hero { padding: 60px 7%; min-height: 85vh; display: flex; align-items: center; }
+.hero-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.hero-content h1 { font-size: 3.5rem; line-height: 1.1; margin: 15px 0; }
+.buscador-container { background: white; padding: 10px; border-radius: 50px; display: flex; box-shadow: 0 10px 30px rgba(0,0,0,0.08); width: fit-content; }
+.input-group { display: flex; align-items: center; padding: 0 15px; border-right: 1px solid #eee; }
+.input-group input, .input-group select { border: none; outline: none; padding: 8px; }
+.btn-buscar { background: var(--color-principal); color: white; border: none; padding: 10px 25px; border-radius: 50px; cursor: pointer; font-weight: 600; }
+.hero-image img { width: 100%; border-radius: var(--radio-grande); transform: rotate(2deg); box-shadow: 10px 10px 30px rgba(0,0,0,0.1); }
+
+/* FEED */
+.seccion-adopcion { padding: 60px 7%; }
+.grid-animales { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
+.card-perfil { background: white; border-radius: var(--radio-mediano); overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; }
+.card-perfil:hover { transform: translateY(-10px); }
+.card-header-img { height: 200px; }
+.card-header-img img { width: 100%; height: 100%; object-fit: cover; }
+.card-info-social { padding: 20px; }
+.nombre-verificado { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.verified { color: #1877f2; }
+.interacciones-sociales { display: flex; gap: 10px; margin-top: 15px; }
+.btn-perfil { flex: 1; background: #e4e6eb; border: none; padding: 10px; border-radius: 8px; font-weight: 600; cursor: pointer; }
+
+/* LIKE ANIMADO */
+.btn-like { width: 40px; border: none; background: #f0f2f5; color: #ccc; border-radius: 8px; cursor: pointer; transition: 0.3s; }
+.btn-like.liked { color: #e74c3c; background: #ffebee; animation: heartBeat 0.4s; }
+@keyframes heartBeat { 0% {transform: scale(1);} 50% {transform: scale(1.3);} 100% {transform: scale(1);} }
+
+/* REPORTE & UBICACIÓN CORREGIDA */
+.seccion-reporte { padding: 80px 7%; background: #f0ede9; }
+.form-container { background: white; padding: 40px; border-radius: var(--radio-grande); max-width: 800px; margin: 0 auto; }
+.grid-form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.full-width { grid-column: span 2; }
+.input-with-icon { position: relative; display: flex; align-items: center; }
+.input-with-icon i { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--color-principal); }
+.input-with-icon input { padding-left: 45px !important; }
+input, select, textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 10px; background: #fafafa; }
+.file-upload-wrapper { border: 2px dashed #ddd; padding: 20px; text-align: center; border-radius: 10px; position: relative; }
+.file-upload-field { position: absolute; opacity: 0; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer; }
+.btn-enviar-reporte { grid-column: span 2; background: var(--color-principal); color: white; border: none; padding: 15px; border-radius: 50px; font-weight: 700; cursor: pointer; }
+
+/* NOSOTROS */
+.seccion-nosotros { padding: 80px 7%; background: white; }
+.nosotros-container { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.nosotros-decoracion img { width: 100%; border-radius: var(--radio-grande); }
+/* --- AJUSTE DE ESTÉTICA EN SECCIÓN NOSOTROS --- */
+
+/* La oración "Nuestra Misión" ahora será el título principal */
+.nosotros-texto .subtitulo {
+    display: block;             /* Para que ocupe su propia línea */
+    font-size: 3rem;            /* Tamaño grande */
+    font-weight: 700;           /* Negrita fuerte */
+    color: var(--color-texto);  /* Color oscuro principal */
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+/* La oración "Reescribiendo el destino..." ahora será el subtítulo */
+.nosotros-texto h2 {
+    font-size: 1.5rem;          /* Tamaño más pequeño y elegante */
+    font-weight: 500;           /* Peso medio */
+    color: var(--color-principal); /* Color naranja para resaltar */
+    text-transform: uppercase;  /* Mayúsculas para estilo tipo badge */
+    letter-spacing: 0px;        /* Espaciado entre letras */
+    margin-bottom: 2px;
+}
+
+/* Ajuste opcional para el párrafo de abajo */
+.nosotros-texto p {
+    color: var(--color-muted);
+    font-size: 1rem;
+    max-width: 500px;
+}
+
+.puntos-clave { margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.punto { display: flex; align-items: center; gap: 15px; }
+
+/* FOOTER */
+footer { background: #2f3542; color: white; padding: 60px 7% 30px; border-radius: 40px 40px 0 0; }
+.footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; }
+.social-icons { display: flex; gap: 15px; margin-top: 20px; }
+.social-icons a { color: white; background: rgba(255,255,255,0.1); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; }
+.footer-links ul { list-style: none; margin-top: 15px; }
+.footer-links a { color: #ccc; text-decoration: none; display: block; margin-bottom: 10px; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; padding-top: 20px; text-align: center; color: #888; }
+
+/* MODAL */
+.modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); backdrop-filter: blur(5px); }
+.modal-content { 
+    background: white; 
+    margin: 5% auto; /* Bajamos el margen superior */
+    width: 90%; 
+    max-width: 750px; 
+    border-radius: 20px; 
+    overflow: hidden; 
+    position: relative; 
+    /* Eliminamos el display: grid de aquí, ya lo tiene el body-social */
+}
+.modal-foto img { width: 100%; height: 100%; object-fit: cover; }
+.modal-detalles { padding: 30px; }
+.close-modal { position: absolute; right: 20px; top: 10px; font-size: 30px; cursor: pointer; }
+.btn-adoptar-final { background: var(--color-principal); color: white; border: none; padding: 12px; width: 100%; border-radius: 10px; margin-top: 20px; cursor: pointer; font-weight: 700; }
+
+/* NEWSLETTER MODERNO */
+.newsletter-form-moderno {
+    display: flex;
+    background: rgba(255,255,255,0.05);
+    padding: 5px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
+
+.newsletter-form-moderno:focus-within {
+    border-color: var(--color-principal);
+    background: rgba(255,255,255,0.08);
+}
+
+.newsletter-form-moderno input {
+    background: transparent !important;
+    border: none !important;
+    color: white !important;
+    padding: 10px 15px !important;
+    flex: 1;
+}
+
+.newsletter-form-moderno button {
+    background: var(--color-principal);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.newsletter-form-moderno button:hover {
+    background: #e67e22;
+    transform: translateX(3px);
+}
+
+/* AJUSTE HERO IMAGEN */
+.hero-image .img-wrapper {
+    box-shadow: 15px 15px 40px rgba(0,0,0,0.15);
+    border: 8px solid white; /* Efecto marco de foto */
+}
+
+@media (max-width: 900px) {
+    .hero-container {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+    }
+    .hero-image .img-wrapper {
+        max-width: 250px !important;
+        margin: 30px auto 0 !important;
+    }
+    .buscador-container {
+        margin: 0 auto;
+    }
+}
+
+/* ARREGLO PARA QUE EL MODAL NO SE EXPANDA (Punto 1) */
+.modal-body-social {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    /* Eliminamos el max-height fijo para que el modal sea 
+       tan alto como el texto lo requiera, evitando el vacío blanco */
+    align-items: stretch; 
+}
+
+.modal-foto {
+    height: 100%;
+    background: #000;
+}
+
+.modal-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto corta la imagen para que no deforme el modal */
+}
+
+.modal-detalles {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto; /* Si el texto es muy largo, permite scroll solo ahí */
+}
+
+/* Responsivo para el modal */
+@media (max-width: 700px) {
+    .modal-body-social {
+        grid-template-columns: 1fr;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    .modal-foto { height: 250px; }
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paw Friends | Código de vida nuevo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo"><i class="fas fa-paw"></i> Paw Friends</div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#adopcion">Adoptar</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#reportar" class="btn-reportar-nav"><i class="fas fa-exclamation-triangle"></i> Reportar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<section id="inicio" class="hero">
+    <div class="hero-container" style="grid-template-columns: 1.4fr 0.6fr; align-items: center;">
+        <div class="hero-content">
+            <span class="badge-hero">Nuevos comienzos 🐾</span>
+            <h1>¡Adopta! Un código de vida nuevo</h1>
+            <p>Donde el único <strong>bug</strong> es no haberlo hecho antes. Dale un <strong>sistema</strong> a su felicidad.</p>
+            
+            <div class="buscador-container">
+                <div class="input-group">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="inputBusqueda" placeholder="Buscar nombre...">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-filter"></i>
+                    <select id="filtroTipo" class="custom-select">
+                        <option value="todos">Todos</option>
+                        <option value="perro">Perros</option>
+                        <option value="gato">Gatos</option>
+                    </select>
+                </div>
+                <button class="btn-buscar" onclick="document.getElementById('adopcion').scrollIntoView()">Compilar Amor</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="img-wrapper" style="max-width: 350px; margin: 0 auto;"> <img src="https://images.unsplash.com/photo-1560743641-3914f2c45636?auto=format&fit=crop&w=800&q=80">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="adopcion" class="seccion-adopcion">
+        <div class="section-header">
+            <h2>Feed de nuevos amigos</h2>
+            <p>Perfiles verificados listos para conectar.</p>
+        </div>
+        <div class="grid-animales" id="gridAnimales"></div>
+    </section>
+
+    <section id="nosotros" class="seccion-nosotros">
+        <div class="nosotros-container">
+            <div class="nosotros-texto">
+                <span class="subtitulo">Nuestra Misión</span>
+                <h2>Reescribiendo el destino de cada huellita</h2>
+                <p>En Paw Friends, rescatamos y encontramos el "home" definitivo para los animales que carecen de un hogar.</p>
+                <div class="puntos-clave">
+                    <div class="punto"><i class="fas fa-heart"></i> <div><h4>Salud Garantizada</h4><p>Revisión médica completa.</p></div></div>
+                    <div class="punto"><i class="fas fa-home"></i> <div><h4>Match Perfecto</h4><p>Filtramos para el mejor hogar.</p></div></div>
+                </div>
+            </div>
+            <div class="nosotros-decoracion">
+                <img src="https://cdn.pixabay.com/photo/2019/09/23/16/47/friendship-4499076_1280.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section id="reportar" class="seccion-reporte">
+        <div class="form-container">
+            <div class="form-header">
+                <h2><i class="fas fa-bullhorn"></i> Reportar Animal</h2>
+                <p>Tu información puede salvar una vida hoy.</p>
+            </div>
+            <form action="https://formsubmit.co/pawfriends04@gmail.com" method="POST" enctype="multipart/form-data" id="formReporte" class="grid-form">
+                <input type="hidden" name="_subject" value="🚨 NUEVO REPORTE EN PAW FRIENDS">
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="grupo-input">
+                    <label>¿Qué animal es?</label>
+                    <select name="Tipo" id="repTipo" required>
+                        <option value="perro">Perro </option>
+                        <option value="gato">Gato </option>
+                    </select>
+                </div>
+                <div class="grupo-input">
+                    <label>Ubicación Exacta</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" name="Ubicacion" id="repUbi" required placeholder="Ej: Av. Principal 123">
+                    </div>
+                </div>
+                <div class="grupo-input full-width">
+                    <label>Descripción del estado</label>
+                    <textarea name="Mensaje" id="repDesc" rows="4" required placeholder="Describe la situación..."></textarea>
+                </div>
+                <div class="grupo-input full-width">
+                    <label>Evidencia Visual</label>
+                    <div class="file-upload-wrapper" id="fileWrapper" data-text="Click para subir foto">
+                        <input type="file" name="Foto" id="fotoReporte" class="file-upload-field">
+                    </div>
+                </div>
+                <button type="submit" class="btn-enviar-reporte">Enviar Reporte Prioritario</button>
+            </form>
+        </div>
+    </section>
+
+<footer>
+    <div class="footer-top">
+        <div class="footer-info">
+            <div class="logo">🐾 Paw Friends</div>
+            <p>Compilando un futuro mejor para los que no tienen voz.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61586580926009" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/pawfriends04/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/PawFriends04" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h4>Navegación</h4>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#adopcion">Adopta</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+            </ul>
+        </div>
+        <div class="footer-newsletter">
+            <h4>Suscríbete al Log</h4>
+            <p style="font-size: 0.8rem; color: #888; margin-bottom: 10px;">Recibe actualizaciones de nuevos rescates.</p>
+            <form action="https://formsubmit.co/pawfriends04@gmail.com" method="POST" class="newsletter-form-moderno">
+                <input type="hidden" name="_subject" value="✉️ NUEVO SUSCRIPTOR - PAW FRIENDS">
+                <input type="email" name="email" placeholder="Tu mejor correo..." required>
+                <button type="submit">
+                    <span>Unirme</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Paw Friends | v1.5 Final Build</p>
+    </div>
+</footer>
+
+<div id="modalPerfil" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body-social">
+            <div class="modal-foto">
+                <img id="imgModal" src="" alt="Foto del animal">
+            </div>
+            <div class="modal-detalles">
+                <h2 id="nombreModal">Nombre</h2>
+                <p id="biografiaTexto" style="margin-bottom: 20px; color: #636e72;"></p>
+                
+                <form action="https://formsubmit.co/pawfriends04@gmail.com" method="POST" id="formAdopcion">
+                    <input type="hidden" name="_subject" id="asuntoAdopcion" value="SOLICITUD DE ADOPCIÓN">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="Animal de Interés" id="animalInteres">
+                    
+                    <label style="font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 5px;">TU CORREO PARA CONTACTARTE:</label>
+                    <input type="email" name="email" placeholder="ejemplo@correo.com" required 
+                           style="margin-bottom: 10px; border: 1px solid #ddd; padding: 10px;">
+                    
+                    <button type="submit" class="btn-adoptar-final">Confirmar Solicitud de Adopción</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
