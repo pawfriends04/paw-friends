@@ -142,3 +142,35 @@ document.getElementById('formReporte').onsubmit = function() {
 document.addEventListener('DOMContentLoaded', () => {
     cargarAnimales(animales);
 });
+
+// Función para detectar el estado del formulario en la URL
+window.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const status = urlParams.get('status');
+
+    if (status) {
+        let mensaje = "";
+        
+        if (status === 'reporte') {
+            mensaje = "✅ Tu reporte se ha enviado correctamente al correo de la página. ¡Gracias por ayudar!";
+        } else if (status === 'newsletter') {
+            mensaje = "✉️ ¡Suscripción exitosa! Pronto recibirás noticias nuestras.";
+        } else if (status === 'adopcion') {
+            mensaje = "🐾 Solicitud de adopción enviada. Nos pondremos en contacto contigo pronto.";
+        }
+
+        // Crear una notificación visual flotante
+        const alerta = document.createElement('div');
+        alerta.className = 'alerta-flotante';
+        alerta.textContent = mensaje;
+        document.body.appendChild(alerta);
+
+        // Desaparecer después de 5 segundos
+        setTimeout(() => {
+            alerta.classList.add('desvanecer');
+            setTimeout(() => alerta.remove(), 500);
+            // Limpiar la URL para que el mensaje no salga de nuevo al refrescar
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }, 5000);
+    }
+});
