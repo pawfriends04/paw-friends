@@ -7,12 +7,12 @@
 const animales = [
     { 
         id: 1, 
-        nombre: "Rocky", 
+        nombre: "Napoleon", 
         tipo: "perro", 
         edad: "1 año", 
         lugar: "Zona Norte", 
-        foto: "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=500&q=80", 
-        bio: "Rocky es un experto en seguridad del hogar, leal y muy cariñoso. Ideal para casas con patio amplio." 
+        foto: "images/napoleon.jpeg", 
+        bio: "Napoleon es un experto en seguridad del hogar, leal y muy cariñoso. Ideal para casas pequeñas." 
     },
     { 
         id: 2, 
@@ -175,3 +175,4 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 5000);
     }
 });
+
