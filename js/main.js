@@ -34,12 +34,12 @@ const animales = [
     },
     { 
         id: 4, 
-        nombre: "Simba", 
-        tipo: "gato", 
-        edad: "5 meses", 
+        nombre: "Bella", 
+        tipo: "perro", 
+        edad: "3 años", 
         lugar: "Zona Este", 
-        foto: "https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=500&q=80", 
-        bio: "Un pequeño explorador curioso. Le encanta trepar y es muy sociable con otros animales." 
+        foto: "images/bella.jpeg", 
+        bio: "Un pequeña exploradora curiosa. Le encanta excavar y es muy sociable con otros animales." 
     }
 ];
 
@@ -174,6 +174,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 5000);
     }
 });
+
 
 
 
