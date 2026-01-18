@@ -43,12 +43,12 @@ const animales = [
     },
     { 
         id: 5, 
-        nombre: "Napoleon", 
+        nombre: "Nacho", 
         tipo: "perro", 
-        edad: "1 año", 
-        lugar: "Zona Norte", 
-        foto: "images/napoleon.jpeg", 
-        bio: "Napoleon es un experto en seguridad del hogar, leal y muy cariñoso. Ideal para casas pequeñas." 
+        edad: "2 año", 
+        lugar: "Zona Sur", 
+        foto: "images/nacho.jpeg", 
+        bio: "Nacho es un experto en jugar con la pelota, leal y muy cariñoso. Ideal para patios grandes." 
     }
     
 ];
@@ -185,6 +185,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 5000);
     }
 });
+
 
 
 
