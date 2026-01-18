@@ -16,12 +16,12 @@ const animales = [
     },
     { 
         id: 2, 
-        nombre: "Luna", 
+        nombre: "Tom", 
         tipo: "gato", 
         edad: "2 años", 
         lugar: "Centro", 
-        foto: "https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=500&q=80", 
-        bio: "Luna prefiere el modo silencioso y las siestas al sol. Es una gata muy independiente y elegante." 
+        foto: "images/tom.jpeg", 
+        bio: "Tom prefiere el modo silencioso y las siestas al sol. Es un gato muy independiente y elegante." 
     },
     { 
         id: 3, 
@@ -175,4 +175,5 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 5000);
     }
 });
+
 
