@@ -27,7 +27,7 @@ const animales = [
         id: 3, 
         nombre: "Samira", 
         tipo: "perro", 
-        edad: "5 años", 
+        edad: "8 años", 
         lugar: "Parque Sur", 
         foto: "images/samira.jpeg", 
         bio: "Una perrita bastante cariñosa. Busca una familia activa que quiera jugar con ella." 
@@ -174,6 +174,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 5000);
     }
 });
+
 
 
 
