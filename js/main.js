@@ -25,12 +25,12 @@ const animales = [
     },
     { 
         id: 3, 
-        nombre: "Max", 
+        nombre: "Samira", 
         tipo: "perro", 
-        edad: "3 meses", 
+        edad: "5 años", 
         lugar: "Parque Sur", 
-        foto: "https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=500&q=80", 
-        bio: "Un cachorro con energía ilimitada. Busca una familia activa que quiera jugar y entrenar con él." 
+        foto: "images/samira.jpeg", 
+        bio: "Una perrita bastante cariñosa. Busca una familia activa que quiera jugar con ella." 
     },
     { 
         id: 4, 
@@ -174,5 +174,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 5000);
     }
 });
+
 
 
