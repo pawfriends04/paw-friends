@@ -39,7 +39,7 @@ const animales = [
         edad: "3 años", 
         lugar: "Zona Este", 
         foto: "images/bellajpeg", 
-        bio: "Un pequeña exploradora curiosa. Le encanta escavar y es muy sociable con otros animales." 
+        bio: "Un pequeña exploradora curiosa. Le encanta excavar y es muy sociable con otros animales." 
     }
 ];
 
@@ -175,6 +175,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 5000);
     }
 });
+
 
 
 
