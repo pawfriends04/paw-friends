@@ -40,7 +40,17 @@ const animales = [
         lugar: "Zona Este", 
         foto: "images/bella.jpeg", 
         bio: "Un pequeña exploradora curiosa. Le encanta excavar y es muy sociable con otros animales." 
+    },
+    { 
+        id: 5, 
+        nombre: "Napoleon", 
+        tipo: "perro", 
+        edad: "1 año", 
+        lugar: "Zona Norte", 
+        foto: "images/napoleon.jpeg", 
+        bio: "Napoleon es un experto en seguridad del hogar, leal y muy cariñoso. Ideal para casas pequeñas." 
     }
+    
 ];
 
 // 2. REFERENCIAS AL DOM
@@ -175,6 +185,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 5000);
     }
 });
+
 
 
 
