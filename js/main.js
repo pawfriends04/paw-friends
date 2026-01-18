@@ -27,19 +27,19 @@ const animales = [
         id: 3, 
         nombre: "Samira", 
         tipo: "perro", 
-        edad: "5 años", 
+        edad: "8 años", 
         lugar: "Parque Sur", 
         foto: "images/samira.jpeg", 
         bio: "Una perrita bastante cariñosa. Busca una familia activa que quiera jugar con ella." 
     },
     { 
         id: 4, 
-        nombre: "Simba", 
-        tipo: "gato", 
-        edad: "5 meses", 
+        nombre: "Bella", 
+        tipo: "perro", 
+        edad: "3 años", 
         lugar: "Zona Este", 
-        foto: "https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=500&q=80", 
-        bio: "Un pequeño explorador curioso. Le encanta trepar y es muy sociable con otros animales." 
+        foto: "images/bellajpeg", 
+        bio: "Un pequeña exploradora curiosa. Le encanta escavar y es muy sociable con otros animales." 
     }
 ];
 
@@ -175,6 +175,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 5000);
     }
 });
+
 
 
 
