@@ -10,7 +10,7 @@ const animales = [
         nombre: "Napoleon", 
         tipo: "perro", 
         edad: "1 año", 
-        lugar: "Zona Norte", 
+        lugar: "Plaza de armas Ica", 
         foto: "images/napoleon.jpeg", 
         bio: "Napoleon es un experto en seguridad del hogar, leal y muy cariñoso. Ideal para casas pequeñas." 
     },
@@ -19,7 +19,7 @@ const animales = [
         nombre: "Tom", 
         tipo: "gato", 
         edad: "2 años", 
-        lugar: "Centro", 
+        lugar: "Calle San Martin", 
         foto: "images/tom.jpeg", 
         bio: "Tom prefiere el modo silencioso y las siestas al sol. Es un gato muy independiente y elegante." 
     },
@@ -28,7 +28,7 @@ const animales = [
         nombre: "Samira", 
         tipo: "perro", 
         edad: "8 años", 
-        lugar: "Parque Sur", 
+        lugar: "Calle bolivar", 
         foto: "images/samira.jpeg", 
         bio: "Una perrita bastante cariñosa. Busca una familia activa que quiera jugar con ella." 
     },
@@ -37,7 +37,7 @@ const animales = [
         nombre: "Bella", 
         tipo: "perro", 
         edad: "3 años", 
-        lugar: "Zona Este", 
+        lugar: "Calle Lima", 
         foto: "images/bella.jpeg", 
         bio: "Un pequeña exploradora curiosa. Le encanta excavar y es muy sociable con otros animales." 
     }
@@ -174,6 +174,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 5000);
     }
 });
+
 
 
 
